@@ -3,10 +3,11 @@ let API_KEY = "api5acfcb6e9d514647b";
 let username = "netman";
 let password = "s3nt3ll082";
 let API_URL = `http://api.spinnerchief.com:9001?`;
+const corsAPI = "https://cors-anywhere.herokuapp.com/";
 
 export const usedCredit = async() => {
     const res = await fetch(
-        `http://api.spinnerchief.com:9001/apikey=${API_KEY}&username=${username}&password=${password}&querytimes=1`, {
+        `${corsAPI}http://api.spinnerchief.com:9001/apikey=${API_KEY}&username=${username}&password=${password}&querytimes=1`, {
             method: "POST",
             body: "used for later",
         }
@@ -18,7 +19,7 @@ export const usedCredit = async() => {
 
 export const remainingCredit = async() => {
     const res = await fetch(
-        `http://api.spinnerchief.com:9001/apikey=${API_KEY}&username=${username}&password=${password}&querytimes=2`, {
+        `${corsAPI}http://api.spinnerchief.com:9001/apikey=${API_KEY}&username=${username}&password=${password}&querytimes=2`, {
             method: "POST",
             body: "remaining credit checking",
         }
