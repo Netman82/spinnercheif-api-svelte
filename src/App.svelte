@@ -82,7 +82,7 @@
   <h1
     class="text-3xl sm:text-5xl drop-shadow-lg uppercase text-white mb-10 mt-10"
   >
-    Article Spinner with Sveltekit
+    Article Spinner with Sveltekit 1
   </h1>
 
   <div class="relative w-full h-screen text-center">
