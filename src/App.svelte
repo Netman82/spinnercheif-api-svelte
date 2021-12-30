@@ -2,7 +2,6 @@
   import { fly } from "svelte/transition";
   import { usedCredit, remainingCredit } from "./stores/SCAPI";
 
-  const corsAPI = "https://cors-anywhere.herokuapp.com/";
   let orgText = document.querySelector("#original");
   orgText ? (orgText = orgText.value) : (orgText = "");
   let spunText = document.querySelector("#spun");
@@ -26,7 +25,7 @@
     isLoading = true;
 
     const res = await fetch(
-      `${corsAPI}http://api.spinnerchief.com:9001/apikey=api5acfcb6e9d514647b&username=netman&password=s3nt3ll082&spintype=1`,
+      `http://api.spinnerchief.com:9001/apikey=api5acfcb6e9d514647b&username=netman&password=s3nt3ll082&spintype=1`,
       {
         method: "post",
         body: orgText,
