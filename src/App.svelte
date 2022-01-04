@@ -7,6 +7,7 @@
   let spunText = document.querySelector("#spun");
 
   // let used = "";
+  
   let remaining = "";
   let isLoading = false;
   // let spun = "";
@@ -25,7 +26,7 @@
     isLoading = true;
 
     const res = await fetch(
-      `http://api.spinnerchief.com:9001/apikey=api5acfcb6e9d514647b&username=netman&password=s3nt3ll082&spintype=1`,
+      "http://api.spinnerchief.com:8080/apikey=api5acfcb6e9d514647b&username=netman&password=s3nt3ll082&spintype=1",
       {
         method: "post",
         body: orgText,
